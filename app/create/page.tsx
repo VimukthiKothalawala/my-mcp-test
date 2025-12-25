@@ -1,5 +1,3 @@
-'use client'
-
 import { createClient } from '@/lib/supabase/server'
 import Header from '@/components/Header'
 import CreatePostForm from '@/components/CreatePostForm'
