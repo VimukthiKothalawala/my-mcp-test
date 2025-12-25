@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { User } from '@supabase/supabase-js'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
+import RichTextEditor from './RichTextEditor'
 
 export default function CreatePostForm({ user }: { user: User }) {
   const [title, setTitle] = useState('')
@@ -65,15 +66,7 @@ export default function CreatePostForm({ user }: { user: User }) {
           <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">
             Content
           </label>
-          <textarea
-            id="content"
-            required
-            rows={5}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-            placeholder="Write your post content..."
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-          />
+          <RichTextEditor value={content} onChange={setContent} />
         </div>
         <button
           type="submit"

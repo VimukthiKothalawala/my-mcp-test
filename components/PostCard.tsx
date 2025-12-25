@@ -88,7 +88,10 @@ export default function PostCard({ post, userId }: { post: Post; userId?: string
         </div>
       </div>
       
-      <p className="text-gray-700 whitespace-pre-wrap mb-4">{post.content}</p>
+      <div 
+        className="text-gray-700 mb-4 prose prose-sm max-w-none dark:prose-invert"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
       
       <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
         <button
