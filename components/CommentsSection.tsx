@@ -74,7 +74,7 @@ export default function CommentsSection({ postId, userId }: { postId: string; us
       {userId && (
         <form onSubmit={handleSubmit} className="mb-6">
           <textarea
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             rows={3}
             placeholder="Write a comment..."
             value={newComment}

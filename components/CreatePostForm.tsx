@@ -55,7 +55,7 @@ export default function CreatePostForm({ user }: { user: User }) {
             id="title"
             type="text"
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             placeholder="Enter post title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -69,7 +69,7 @@ export default function CreatePostForm({ user }: { user: User }) {
             id="content"
             required
             rows={5}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             placeholder="Write your post content..."
             value={content}
             onChange={(e) => setContent(e.target.value)}
